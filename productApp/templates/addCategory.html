@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="p-4 m-4">
+        <div class="col-lg-4 mt-4 mb-4 mx-auto border">
+           <br>
+            <form action="\addcategory" method="POST" class="px-4">
+                {% csrf_token %}
+                <!-- {% if error%}
+                <div class="alert alert-danger" role="alert">
+                    {{error}}
+                </div>
+                {% endif %} -->
+           
+
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" required name="category" placeholder="Fashion, Electronics, Furniture etc" id=""
+                        class="form-control form-control-sm">
+                </div><br>
+               
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-sm btn-info my-3 col-lg-4" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
